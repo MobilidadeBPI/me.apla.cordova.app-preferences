@@ -19,7 +19,8 @@ module.exports = function (context) {
 		.catch(function(err) {
 			if (err.code === 'NEXIST') {
 				console.log("app-settings.json not found: creating a sample file");
-				return settings.create();
+				return;
+				//return settings.create();
 			}
 
 			console.log ('unhandled exception', err);
